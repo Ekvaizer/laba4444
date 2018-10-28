@@ -73,26 +73,26 @@ public class masiv {
 		int max = 0;
 		int min = 0;
 		int[] mas = new int[25];
-		int maxI = 0;
-		int minI = 0;
+		int maxel = 0;
+		int minel = 0;
 		for (int i = 0; i < 25; i++) {
 			mas[i] = i;
 		}
 		for (int i = 0; i < 25; i++) {
 			if (mas[i] > max) {
 				max = mas[i];
-				maxI = i;
+				maxel = i;
 			}
 			if (mas[i] < min) {
 				min = mas[i];
-				minI = i;
+				minel = i;
 			}
 
 		}
 
-		int temp = mas[maxI];
-		mas[maxI] = min;
-		mas[minI] = max;
+		int temp = mas[maxel];
+		mas[maxel] = min;
+		mas[minel] = max;
 
 		System.out.println("Минимальный элемент " + min + " и максимальный "
 				+ max + "поменялись местами.");
@@ -106,26 +106,26 @@ public class masiv {
 		int max = 0;
 		int min = 0;
 		int[] mas = new int[25];
-		int maxI = 0;
-		int minI = 0;
+		int maxel = 0;
+		int minel = 0;
 		for (int i = 0; i < 25; i++) {
 			mas[i] = i;
 		}
 		for (int i = 0; i < 25; i++) {
 			if (mas[i] > max) {
 				max = mas[i];
-				maxI = i;
+				maxel = i;
 			}
 			if (mas[i] < min) {
 				min = mas[i];
-				minI = i;
+				minel = i;
 			}
 
 		}
 
-		int temp = mas[maxI];
-		mas[maxI] = min;
-		mas[minI] = max;
+		int temp = mas[maxel];
+		mas[maxel] = min;
+		mas[minel] = max;
 
 		System.out.println("Минимальный элемент " + min + " и максимальный "
 				+ max + "поменялись местами.");
@@ -138,30 +138,30 @@ public class masiv {
 		// TODO Auto-generated method stub
 
 		Random rd = new Random();
-		int[] array = new int[26];
+		int[] mas = new int[26];
 		int temp = 0;
 		for (int i = 0; i < 25; i++) {
-			array[i] = rd.nextInt(105);
+			mas[i] = rd.nextInt(105);
 		}
 
 		for (int i = 0; i < 25; i++) {
-			System.out.print(array[i] + " ");
+			System.out.print(mas[i] + " ");
 
 		}
 
 		// сортировка пузырьком
 		for (int i = 25; i >= 0; i--)
 			for (int j = 0; j < i; j++) {
-				if (array[j] > array[j + 1]) {
-					temp = array[j + 1];
-					array[j + 1] = array[j];
-					array[j] = temp;
+				if (mas[j] > mas[j + 1]) {
+					temp = mas[j + 1];
+					mas[j + 1] = mas[j];
+					mas[j] = temp;
 				}
 			}
 
 		System.out.println();
 		for (int i = 0; i < 25; i++) {
-			System.out.print(array[i] + " ");
+			System.out.print(mas[i] + " ");
 
 		}
 	}
